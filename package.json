@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-wordpress-demo",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Bootstrap Project for Wordpress CMS",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Marcos Renato <D.vida Digital>",
   "dependencies": {
     "dotenv": "^6.2.0",
     "gatsby": "^2.0.76",
@@ -18,10 +18,17 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "antd": "^3.10.3",    
+    "gatsby-plugin-antd": "^2.0.2",
+    "gatsby-plugin-less": "^2.0.6",    
+    "less": "^3.8.1"    
   },
   "keywords": [
-    "gatsby"
+    "antd",
+    "gatsby",
+    "react",
+    "webpack"
   ],
   "license": "MIT",
   "scripts": {
@@ -33,12 +40,5 @@
   },
   "devDependencies": {
     "prettier": "^1.15.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

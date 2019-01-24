@@ -13,13 +13,25 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-less',
+      options: {
+        javascriptEnabled: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-antd',
+      options: {
+        style: true,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `gatsby-wordpress-base`,
+        short_name: `gastby-wordpress`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
