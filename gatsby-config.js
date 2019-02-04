@@ -39,6 +39,21 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {       
+      resolve: "gatsby-source-woocommerce",
+      options: {
+       // Base URL of Wordpress site
+        api: 'localhost/wordpress',
+        // true if using https. false if nah.
+        https: false,
+        api_keys: {
+          consumer_key: "ck_ef1c761741cae6d2822ff3aacb1947aa3e2988f1",
+          consumer_secret: "cs_91dffd8b6e99ae9d3a71dd34b008294322d8c30a",
+        },
+        // Array of strings with fields you'd like to create nodes for...
+        fields: ['products']
+      }
+    },
     {
       resolve: "gatsby-source-wordpress",
       options: {
@@ -46,7 +61,7 @@ module.exports = {
         * The base URL of the Wordpress site without the trailingslash and the protocol. This is required.
         * Example : 'gatsbyjsexamplewordpress.wordpress.com' or 'www.example-site.com'
         */
-        baseUrl: "localhost/mag",
+        baseUrl: "localhost/wordpress",
         // The protocol. This can be http or https.
         protocol: "http",
         // Indicates whether the site is hosted on wordpress.com.
@@ -79,7 +94,7 @@ module.exports = {
           // If two-factor authentication is enabled then you need to create an Application-Specific Password,
           // see https://en.support.wordpress.com/security/two-step-authentication/#application-specific-passwords
           wpcom_app_clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
-          wpcom_app_clientId: "ec6YrFEgKQTz",
+          wpcom_app_clientId: "fDL0jLJE3etz",
           wpcom_user: "gatsbyjswpexample@gmail.com",
           wpcom_pass: process.env.WORDPRESS_PASSWORD,
 
